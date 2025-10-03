@@ -35,7 +35,7 @@ streamlit run app.py
 ## 📂 Repo Structure
 ```
 ├── app.py                 # Streamlit frontend
-├── extractor.py           # Dummy extraction logic
+├── extractor.py           # Heuristic extraction logic (regex, multi-engine)
 ├── requirements.txt       # Dependencies
 ├── README.md              # Documentation
 └── sample_files/

@@ -21,6 +21,12 @@ if uploaded_file is not None:
         st.subheader("Extracted Data")
         st.dataframe(df)
 
+        with st.expander("Raw text preview", expanded=False):
+            st.text(data.get("Raw_Text_Extracted", ""))
+
+        with st.expander("JSON preview", expanded=False):
+            st.code(json.dumps(data, indent=2), language="json")
+
         csv = df.to_csv(index=False).encode("utf-8")
         st.download_button("⬇️ Download CSV", csv, "output.csv", "text/csv")
 
